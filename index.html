@@ -4,7 +4,349 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      .site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color:#2c3e50;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 10px;
+}
+
+.site-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* CONTENT AND LISTING STYLE */
+
+/* CONTENT SECTION */
+.content-section {
+  padding: 40px 30px;
+  background-color: #f9f9f9;
+}
+
+.content-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.property-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.property-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover {
+  transform: scale(1.03);
+}
+
+.property-card img {
+  width: 100%;
+  height: auto;
+}
+
+.property-card h3 {
+  padding: 15px 15px 0;
+  font-size: 1.2rem;
+  color: #2d3135;
+}
+
+.property-card p {
+  padding: 0 15px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.property-card a {
+  display: block;
+  padding: 10px 15px 15px;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.property-card a:hover {
+  text-decoration: underline;
+}
+
+
+/*CONTACT CSS */
+
+/* CALL TO ACTION SECTION */
+.cta-section {
+  background: linear-gradient(to right, #3498db, #2c3e50);
+  color: white;
+  text-align: center;
+  padding: 60px 30px;
+  margin-top: 40px;
+}
+
+.cta-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  background-color: #f39c12;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #d35400;
+}
+
+/*FOOTER CSS*/
+
+/* FOOTER STYLES */
+.site-footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 40px 30px 20px;
+  font-size: 0.95rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-info h4,
+.footer-links h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-info p,
+.footer-links ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #f1f1f1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #f39c12;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+
+/*aboutus css*/
+
+/* ABOUT US SECTION */
+.about-section {
+  background-color: #f4f4f4;
+  padding: 60px 30px;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #686f76;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #848c95;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+/*contact css */
+
+/* CONTACT SECTION */
+.contact-section {
+  padding: 60px 30px;
+  background-color: #693e3e;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  color: #adb0b4;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  color: #d1c5c5;
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #2c80b4;
+}
+
+/*Home css*/
+
+.hero-section {
+    background: url('https://via.placeholder.com/1600x600') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(80, 38, 38);
+}
+.hero-content h1 {
+    font-size: 3rem;
+}
+.hero-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #f39c12;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Properties, About, CTA, Contact, and Footer - reuse from previous messages */
+/* Example placeholder below to keep structure clean */
+.properties-section, .about-section, .cta-section, .contact-section, .site-footer {
+    padding: 60px 30px;
+    background:url(images/BG2.jpg) repeat fixed center
+}
+    </style>
   </head>
   <body>
     <header class="site-header">
